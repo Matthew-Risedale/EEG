@@ -1,1 +1,3 @@
 # EEG
+
+Magic 
