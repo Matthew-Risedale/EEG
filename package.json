@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "./client/index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot",
+    "start-server": "nodemon --exec babel-node ./server/server.js --ignore public/"
   },
   "license": "MIT",
   "keywords": [
