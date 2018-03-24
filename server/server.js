@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001;
 
 
 //mongoose.connect(mongoURL);
+//todo: let's carry out logic for mongo connector in a separate file
 
 const app = express();
 
