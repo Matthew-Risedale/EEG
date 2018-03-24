@@ -1,4 +1,6 @@
 $headerHeight: 75px;
+$mapWidth: 800px;
+$mapHeight: 800px;
 
 .game {
   display: grid;
@@ -7,10 +9,11 @@ $headerHeight: 75px;
   grid-template-areas:
           "header header"
           "board editor";
-  height: 100%;
+  height: 100vh;
 
-  & * {
-    height: 100%;
+  //temporary: set up grid borders
+  & > * {
+    border: 1px dotted black
   }
 }
 
@@ -20,6 +23,29 @@ $headerHeight: 75px;
 
 .board {
   grid-area: board;
+  min-width: $mapWidth;
+  min-height: $mapHeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  & > .map {
+    width: $mapWidth;
+    height: $mapHeight;
+    border: 1px solid black
+  }
 }
 
 .editor {

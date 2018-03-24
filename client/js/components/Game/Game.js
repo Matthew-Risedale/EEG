@@ -12,9 +12,13 @@ class Game extends React.Component {
     render() {
         return (
             <div className={styles.game}>
-                <header className={styles.header}>Some header with useful links</header>
+                <header className={styles.header}>
+                    <div>Some header with useful links</div>
+                </header>
                 <div className={styles.board}>
-                    Board Component
+                   <div className={styles.map}>
+                       Map Component
+                   </div>
                 </div>
                 <div className={styles.editor}>
                     Editor Component

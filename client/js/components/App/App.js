@@ -2,8 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Game from './../Game';
 
-import styles from './App.scss';
-
 const App = () => (
     <Router>
         <Switch>
