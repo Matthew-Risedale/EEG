@@ -24,7 +24,6 @@ const App = () => (
                 path="/"
                 component={() => <Redirect to={{
                     pathname: '/game',
-                    search: '?person=personNameFromDBAfterLogin',
                     state: {personID: 'personIDFromDBAfterLogin'}
                 }}/>}
             />

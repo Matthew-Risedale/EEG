@@ -4,7 +4,7 @@ class Game extends React.Component {
 
     constructor(props) {
         super(props);
-        //create web socket connection with this.props.location.state.personID
+        //create web socket connection with props.location.state.personID
     }
 
     render() {
