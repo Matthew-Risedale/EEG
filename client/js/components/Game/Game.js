@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './Game.scss';
+
 class Game extends React.Component {
 
     constructor(props) {
@@ -9,11 +11,12 @@ class Game extends React.Component {
 
     render() {
         return (
-            <div className='game'>
-                <div className='board'>
+            <div className={styles.game}>
+                <header className={styles.header}>Some header with useful links</header>
+                <div className={styles.board}>
                     Board Component
                 </div>
-                <div className='editor'>
+                <div className={styles.editor}>
                     Editor Component
                 </div>
             </div>
