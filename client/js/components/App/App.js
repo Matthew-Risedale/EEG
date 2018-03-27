@@ -1,29 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import styles from './App.scss';
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import Game from './../Game';
 
 const App = () => (
-  <Router>
-    <Switch>
-      <Route
-        path="/login"
-        component={() => (
-          <p>
-            here login page
-          </p>
-        )}
-      />
-      <Route
-        path="/"
-        component={() => (
-          <div className={styles.app}>
-            <h1><Link to="/login">LOGIN</Link></h1>
-          </div>
-        )}
-      />
-
-    </Switch>
-  </Router>
+    <Router>
+        <Switch>
+            <Route
+                path="/login"
+                component={() => (
+                    <p>
+                        here login page
+                    </p>
+                )}
+            />
+            <Route
+                path='/game'
+                component={Game}
+            />
+            {/*
+            Redirect should be in the end!
+            */}
+            <Route
+                path="/"
+                component={() => <Redirect to={{
+                    pathname: '/game',
+                    state: {personID: 'personIDFromDBAfterLogin'}
+                }}/>}
+            />
+        </Switch>
+    </Router>
 );
 
 export default App;

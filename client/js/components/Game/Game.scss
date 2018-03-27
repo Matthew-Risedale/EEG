@@ -1,0 +1,41 @@
+$headerHeight: 75px;
+$mapWidth: 800px;
+$mapHeight: 800px;
+
+.game {
+  display: grid;
+  grid-template-rows: [header-start] $headerHeight [header-end game-ui-start] 1fr [game-ui-end];
+  grid-template-columns: [board-start] 1fr [board-end editor-start] 1fr [editor-end];
+  grid-template-areas:
+          "header header"
+          "board editor";
+  height: 100vh;
+
+  //temporary: set up grid borders
+  & > * {
+    border: 1px dotted black
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.board {
+  grid-area: board;
+  min-width: $mapWidth;
+  min-height: $mapHeight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > .map {
+    width: $mapWidth;
+    height: $mapHeight;
+    border: 1px solid black
+  }
+}
+
+.editor {
+  grid-area: editor;
+}
