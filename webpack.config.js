@@ -45,7 +45,18 @@ module.exports = {
                 }, {
                     loader: "css-loader"
                 }]
-            }
+            },
+          {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                query: {
+                  name: 'images/[name]-[hash].[ext]'
+                }
+              }
+            ]
+          }
         ]
     },
     devServer: {

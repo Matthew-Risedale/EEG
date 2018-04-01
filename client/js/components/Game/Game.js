@@ -1,7 +1,86 @@
 import React from 'react';
 
 import styles from './Game.scss';
+import Map from "./Map/Map";
 
+
+let arr = [
+  [
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+  ],
+  [
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],[
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],[
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],[
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],[
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],[
+  'brick',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'grass',
+  'brick',
+  'brick',
+],
+  [
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+    'brick',
+  ],
+];
 class Game extends React.Component {
 
     constructor(props) {
@@ -17,7 +96,7 @@ class Game extends React.Component {
                 </header>
                 <div className={styles.board}>
                    <div className={styles.map}>
-                       Map Component
+                       <Map coordinates={arr} />
                    </div>
                 </div>
                 <div className={styles.editor}>
