@@ -1,6 +1,6 @@
 import React from 'react';
-
 import styles from './Game.scss';
+import Map from '../Map'
 
 class Game extends React.Component {
 
@@ -17,7 +17,7 @@ class Game extends React.Component {
                 </header>
                 <div className={styles.board}>
                    <div className={styles.map}>
-                       Map Component
+                       <Map/>
                    </div>
                 </div>
                 <div className={styles.editor}>
